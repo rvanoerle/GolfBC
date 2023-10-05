@@ -1,0 +1,19 @@
+#cImg{
+    background-image: url("images/courses/sample.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    border-radius: 5px;
+}
+.bgimg:hover{
+    opacity:50%;
+}
+.cardbody{
+    position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+svg.bi bi-star{
+}
+svg.bi bi-star:hover{
+}
