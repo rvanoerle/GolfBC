@@ -1,3 +1,6 @@
+<?php
+include('../server/db_connect.php');
+?>
 <?php 
 $posts = mysqli_fetch_all(mysqli_query($connection, "SELECT * FROM posts ORDER BY id ASC"), MYSQLI_ASSOC);
 mysqli_close($connection);

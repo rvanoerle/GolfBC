@@ -5,6 +5,10 @@
     background-size: cover;
     border-radius: 5px;
 }
+.card{
+    border-color:#d3d3d3;
+}
+
 .bgimg:hover{
     opacity:50%;
 }
@@ -13,7 +17,78 @@
   top: 50%;
   transform: translate(0, -50%);
 }
-svg.bi bi-star{
+.bi.bi-star{
+    color:white;
 }
-svg.bi bi-star:hover{
+#rate:hover .bi.bi-star,
+#rate .bi.bi-star-fill {
+    display: none;
 }
+#rate:hover .bi.bi-star-fill {
+    display: inline;
+}
+
+.rating > button .bi.bi-star-fill {
+    display: none;
+}
+.rating > button .bi.bi-star-fill,
+.rating > button .bi.bi-star {
+    font-size: 150%;
+}
+.nav-link:hover{
+    text-decoration:underline;
+}
+.cart-title{
+    text-decoration-color: white;
+}
+.card-img-top{
+    opacity:.8;
+}
+
+.crdtop :hover{
+    opacity:.5 !important;
+}
+.bar a{
+    color:black;
+}
+#locationHead{
+    background-image: url("images/kelowna.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    width:100%;
+    height:250px;
+    color:white;
+
+}
+.course-wrap {
+    position: relative;
+    height:300px;
+    background-color: black;
+  }
+  
+  .course-wrap:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 70%;
+    background-image: url('images/courses/1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .course-content {
+    position: relative;
+    color:white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity:100%;
+    
+  }
+  
