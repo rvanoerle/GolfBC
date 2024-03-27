@@ -17,7 +17,7 @@ if ($error != null){
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
     $sql = "SELECT * FROM posts WHERE id ='$id'";
-    
+    echo '';
     $results = mysqli_query($connection, $sql);
     $error = mysqli_error($connection);
     if ($row = mysqli_fetch_assoc($results)) {

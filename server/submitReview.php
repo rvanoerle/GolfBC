@@ -11,16 +11,17 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  if (isset($_POST['courseId']) && isset($_POST['user']) && isset($_POST['comments'])&& isset($_POST['rating'])) {
-    $reviewId = "abaab10";
+  if (isset($_POST['courseId']) && isset($_POST['user']) && isset($_POST['comments'])&& isset($_POST['rating']) && isset($_POST['date'])) {
+    $reviewId = uniqid();
     $courseId = $_POST['courseId'];
     $user = $_POST['user'];
     $comments = $_POST['comments'];
     $rating = $_POST['rating'];
+    $date = $_POST['date'];
 
-    $sql = "INSERT INTO reviews VALUES (?,?,?,?,?)";
+    $sql = "INSERT INTO reviews VALUES (?,?,?,?,?,?)";
     $stmt2 = mysqli_prepare($connection, $sql);
-    mysqli_stmt_bind_param($stmt2, "sissi",$reviewId,$courseId,$user,$comments,$rating);
+    mysqli_stmt_bind_param($stmt2, "sissis",$reviewId,$courseId,$user,$comments,$rating,$date);
     mysqli_stmt_execute($stmt2);
     $sql = "SELECT * FROM reviews WHERE id = ?";
     $stmt = mysqli_prepare($connection, $sql);

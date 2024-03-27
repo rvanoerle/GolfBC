@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function(e){
                                      <h2 id = "name" class="card-title" style = "font-size:30px;">${practice.name}</h2>
                                      <p class="bottom-0 end-0"><i>Range✓ Practice Green✓ Short Game Area✓</i></p>
                                      <p class="card-text mb-0 mt-1 mb-4"><i>${practice.address}</i></p>
-                                     <span class="bottom-0 end-0" style = "padding:10px;"><a href="${practice.website}" class="btn btn-dark">Website</a></span>
+                                     <span class="bottom-0 end-0" style = "padding:10px;"><a href="${practice.website}" class="btn btn-primary">Website</a></span>
                                    </div>
                                
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(e){
                                          <div class="z-1 card-body top-50 start-50 translate-middle" style="position:absolute;width:100%;"> 
                                            <h2 id = "name" class="card-title" style = "font-size:30px;">${practice.name}</h2>
                                            <p class="card-text mb-0 mt-1 mb-4"><i>${practice.address}</i></p>
-                                           <span class="bottom-0 end-0" style = "padding:10px;"><a href="${practice.website}" class="btn btn-dark">Website</a></span>
+                                           <span class="bottom-0 end-0" style = "padding:10px;"><a href="${practice.website}" class="btn btn-primary">Website</a></span>
                                          </div>
                                      
       
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function(e){
                                          <div class="z-1 card-body top-50 start-50 translate-middle" style="position:absolute;width:100%;"> 
                                            <h2 id = "name" class="card-title" style = "font-size:30px;">${practice.name}</h2>
                                            <p class="card-text mb-0 mt-1 mb-4"><i>${practice.location}</i></p>
-                                           <span class="bottom-0 end-0" style = "padding:10px;"><a href="${practice.website}" class="btn btn-dark">Website</a></span>
+                                           <span class="bottom-0 end-0" style = "padding:10px;"><a href="${practice.website}" class="btn btn-primary">Website</a></span>
                                          </div>
                                      
       

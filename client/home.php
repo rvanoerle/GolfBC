@@ -10,7 +10,7 @@ if ($error != null){
 }
 
 ?>
-<div class = "container" style = "justify-content:center;width:100%;">
+<div class = "container" style = "justify-content:center;width:100%;user-select: none;">
 <br>
 
 <div class = "card">
@@ -26,6 +26,7 @@ if ($error != null){
     </div>
 </div>
 <br>
+
 <!--
 <div class = "container">
     <div class = "row">
@@ -38,19 +39,18 @@ if ($error != null){
 
 </div>
 -->
-<div class = "col-4 col-xs-12">
-                                
-<div class="card mb-3 mt-2 bg-dark text-light text-center" style="min-height:400px;">
-<a class="bgimg" href="home.php">
-            <div id = "cImg" class ="z-0" style = "background-image:url(images/courses/1.jpg);height:100%;width:100%;position:absolute;opacity:60%;">
+<div class = "col-4 col-xs-12">                              
+<div id = "course-card" class= "card mb-3 mt-2 bg-dark text-light text-center position" style="min-height:400px;border-color:#d3d3d3;">  
+            <div id = "cImg" class ="z-0" style = "background-image:url(images/courses/1.jpg);height:100%;width:100%;position:absolute;opacity:70%;">
             </div>
-        </a>
+   
             <div class="z-1 card-body top-50 start-50 translate-middle" style="position:absolute;">
-            <a href = "home.php" style = "color:white;text-decoration:none;"><h2 id = "name" class="card-title" style = "font-size:30px;">Tower Ranch</h2></a>
+            <h2 id = "name" class="card-title" style = "font-size:30px;">Tower Ranch</h2>
             <p class="card-text mb-0 mt-1"><i>Par 69</i></p>
             <p class="card-text mt-0 mb-4"><i>6969 yds</i></p>
             <form method="post" action="viewCourse.php">
-            <span class="bottom-0 end-0" style = "padding:10px;"><button class="btn btn-primary" type = "submit">View Course</button></span>
+                <input type = "hidden" name = "courseId" value = "6">
+            <span class="bottom-0 end-0" style = "padding:10px;"><button class="btn btn-primary stretched-link" type = "submit">View Course</button></span>
             </form>
             </div>
         
@@ -61,6 +61,8 @@ if ($error != null){
             <i class ="bi bi-star-fill"></i>
             </button></span>
         </div>
+        <?php if (isset($_SESSION['user'])){
+            echo '
         <form>
         <div class="modal fade" id="xxx" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -93,12 +95,13 @@ if ($error != null){
                     </button>
                 </div>
                 <input type="hidden" id="finalRate" value="" class="form-control" required>
-                <input type="hidden" id="courseId" value="1" class="form-control" required>
+                <input type="hidden" id="courseId" value="6" class="form-control" required>
+                <input type="hidden" id="userId" value="ryderv" class="form-control" required>
                     <div>
                         <label for="reviewComments" class="form-label"></label>
                         <textarea maxlength="255" class="form-control bg-dark text-light" id="reviewComments" rows="3" placeholder="Comments regarding course."></textarea>
                     </div>
-                    <div id="userId" class=" mt-1 form-text fs-6 text-light text-end">ryderv19 </div>
+                    <div class=" mt-1 form-text fs-6 text-light text-end">ryderv</div>
                     <div class="alert alert-danger" role="alert" hidden="hidden" id="failedReview"></div>
                 </div>
                 <div class="modal-footer">
@@ -108,13 +111,32 @@ if ($error != null){
                 </div>
             </div>
             </div>
-</form>
+</form>' ;
+        } else{
+            echo '
+             <div class="modal fade" id="xxx" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                  <p>Must be logged in to review course.</p>
+                </div>
+                <div class="modal-footer">
+                  <a href = "login.php"><button type="button" class="btn btn-primary">Login</button></a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div> ';
+        }?>
             <div class = "z-1 badge  text-wrap top-0 end-0" style="width:6rem;height:2rem;position:absolute;">
                 <h5>$$$<h5>
             </div>
-            </div>
-            </a>
-        </div>
+</div>
+</div>
+        <br>
 </div>
 <script src ="js/courseSort.js"></script>
 <script src ="js/ratingsubmit.js"></script>

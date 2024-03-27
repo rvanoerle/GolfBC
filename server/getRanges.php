@@ -18,7 +18,7 @@ empty($practices) ? $isArray = false : $isArray = true;
                                            <h2 id = "name" class="card-title" style = "font-size:30px;">'.$practice['name'].'</h2>
                                            <p class="bottom-0 end-0"><i>Range✓ Practice Green✓ Short Game Area✓</i></p>
                                            <p class="card-text mb-0 mt-1 mb-4"><i>'.$practice['address'].'</i></p>
-                                           <span class="bottom-0 end-0" style = "padding:10px;"><a href="'.$practice['website'].'" class="btn btn-dark">Website</a></span>
+                                           <span class="bottom-0 end-0" style = "padding:10px;"><a href="'.$practice['website'].'" class="btn btn-primary">Website</a></span>
                                          </div>
                                      
       

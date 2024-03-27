@@ -18,12 +18,12 @@ require('../server/db_connect.php');
     </ul>
     <ul>
   </div>
-    <div style = "float:right;">
+    <!---<div style = "float:right;">
         <form method="post" action="searchForum.php" class="d-flex" role="search">
           <input class="form-control me-2" name = "search" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
-    </div>
+    </div> --->
 </div>
 <br><br>
   
@@ -33,9 +33,31 @@ require('../server/db_connect.php');
   </div>
 </div>
 </div>
+<script src ="js/ratingsubmit.js"></script>
 <script>
 
-  </script>
+$('div.rating button').on('click',function(){
+    $("#finalRate").val($(this).attr("id"));
+    $.each($("div.rating").find("button"),function(){
+        $(this).find( "i.bi.bi-star" ).css( "display", "inline" );
+        $(this).find( "i.bi.bi-star-fill" ).css( "display", "none" );
+    }); 
+    var rate = $(this).attr('id');
+    var btns =  $('.rating button'); 
+    $.each($("div.rating").find("button"),function(){
+        //alert($(this).attr('id'));
+        //alert(rate);
+        if($(this).attr('id') > rate){
+            return false;
+        }else{
+        $(this).find( "i.bi.bi-star-fill" ).css( "display", "inline" );
+        $(this).find( "i.bi.bi-star-fill" ).css( "color", "white" );
+        $(this).find( "i.bi.bi-star" ).css( "display", "none" );
+        }
+    });
+});
+    
+</script>
 <script src ="js/courseSort.js">
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

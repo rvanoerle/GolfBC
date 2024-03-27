@@ -54,10 +54,10 @@ session_start(); ?>
             <a class="nav-link" href="courses.php" target="_top" aria-current="page">Courses</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="marketplace.php" target="_top" aria-current="page">Marketplace</a>
+            <a class="nav-link" href="practice.php" target="_top" aria-current="page">Practice</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="practice.php" target="_top" aria-current="page">Practice</a>
+            <a class="nav-link" href="marketplace.php" target="_top" aria-current="page">Marketplace</a>
             </li>
             <li class="nav-item">
             <a class="nav-link disabled" href="" target="_top" aria-current="page">Merchandise</a>
@@ -111,7 +111,7 @@ session_start(); ?>
             
     });
     //$('a.active').css("text-decoration","underline");
-    $('a.active').css("color","blue");
+    //$('a.active').css("color","blue");
     $('a.active').css("font-weight","bold");
 
 </script>

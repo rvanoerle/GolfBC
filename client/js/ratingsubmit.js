@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', function(e){
       e.preventDefault();
       let courseId = $("#courseId").val();
       let user = $("#userId").val();
+      alert(user);
       let comments = $("#reviewComments").val();
       let rating = $("#finalRate").val();
+      let date = new Date().toISOString().slice(0, 10);
       if (comments && rating) {
         $.post(
           "../server/submitReview.php",
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function(e){
             user: user,
             comments: comments,
             rating: rating,
+            date: date,
           },
           function (data, status) {
             data = data && JSON.parse(data);

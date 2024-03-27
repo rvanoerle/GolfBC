@@ -9,8 +9,8 @@
     border-color:#d3d3d3;
 }
 
-.bgimg:hover{
-    opacity:50%;
+#course-card:hover #cImg{
+    opacity:40% !important;
 }
 .cardbody{
     position: absolute;
@@ -35,8 +35,12 @@
 .rating > button .bi.bi-star {
     font-size: 150%;
 }
-.nav-link:hover{
-    text-decoration:underline;
+.reviewRating > span .bi.bi-star-fill,
+.reviewRating > span .bi.bi-star {
+    color:white;
+}
+.navbar-nav .nav-link:hover{
+    font-weight: bold;
 }
 .cart-title{
     text-decoration-color: white;
@@ -67,7 +71,8 @@
     background-color: black;
   }
   
-  .course-wrap:before {
+  .course-wrap::before {
+    background-color: black;
     content: ' ';
     display: block;
     position: absolute;
@@ -75,8 +80,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 70%;
-    background-image: url('images/courses/1.jpg');
+    opacity: 30%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
