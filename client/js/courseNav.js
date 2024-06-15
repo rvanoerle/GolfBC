@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function(e){
                             <td>${course.designer}</td>
                     </tr>
                     <tr>
-                            <th scope="row">Slope</th>
+                            <th scope="row">Rating/Slope</th>
                             <td>${course.slope}</td>
                     </tr>
                     <tr>
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         $(this).addClass("active");
         $("#navContent").empty();
         $("#navContent").append(
-        '<div w-100><img src="./images/scorecards/tower.jpg" alt="Scorecard" style ="width:100%;"></div>'
+        '<div w-100><img src="./images/scorecards/'+courseId+'.jpg" alt="Scorecard" style ="width:100%;"></div>'
         );
 
     });
