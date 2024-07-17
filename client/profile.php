@@ -1,3 +1,4 @@
+<link rel="stylesheet" href= "profile.css">
 <?php 
 error_reporting(E_ALL);
 ini_set('display_errors','0');
@@ -8,9 +9,6 @@ if ($error != null){
     $output ="<span> Unable to connect to database <span>" .$error;
     exit($output);
 }
-$username = "exampleuser";
-  $name = "Johnny Appleseed";
-  $email = "example@gmail.com";
 /*
 $sql = "SELECT username,name,email FROM users WHERE username = '{$_SESSION['user']}'";
 $result = mysqli_query($connection, $sql);
@@ -26,26 +24,49 @@ mysqli_close($connection);
 //mysqli_close($connection);
 */
 ?> 
-<div class = "container-fluid">
-    <div class="row">
-        <div class = "col" style = "padding:10px;height:100%">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="Images/blank_profile1.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Profile</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>Username: </b><span id="username"><?php echo $username ?></span></li>
-                    <li class="list-group-item"><b>Name: </b><span id="name"><?php echo $name ?></span></li>
-                    <li class="list-group-item"><b>Email: </b><span id="email"><?php echo $email ?></span></li>
-                    <li class="list-group-item"><b>Upload Profile Image: </b></li>
-                </ul>
-                <div class="card-body">
-                    <a href="" class="card-link">Delete Account</a>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <div class="container bg-light" style = "justify-content-center">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2" style = width:100%;">
+                <div class="panel panel-white profile-widget bg-dark text-light" style = "width:100%;">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="image-container bg2">  
+                                <img src="images/blank_profile1.jpg" class="avatar" alt="avatar"> 
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="details" >
+                                <h4><?php echo $username ?><i class="fa fa-sheild"></i></h4>
+                                <div><?php echo $name ?></div>
+                                <div>Member Since: 2024</div>
+                                <div>Home Course: Kelowna Springs Golf Club</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class = "col" style = "padding:10px">
+            
+        <nav class = "courseNav">
+            <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+            <button class="nav-link active" id="about" aria-current="page">Posts</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id= "scorecard" >Reviews</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id = "reviews">Listings</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id = "reviews">Images</button>
+        </li>
+        </nav>
+        <br>
+
+    <div class = "container-fluid">
             <div class="card" style="width: 60rem;">
                 <div class="card-body">
                     <h5 class="card-title">Create Post</h5>
@@ -69,6 +90,8 @@ mysqli_close($connection);
     </div>
     <?php include '../server/getUserPosts.php'?>
 </div>
+
+
 
 <script type="text/javascript" src = "js/createPost.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

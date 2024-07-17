@@ -3,12 +3,14 @@
 session_start(); ?>
 <?php if (isset($_SESSION['user'])) {
   include('../server/db_connect.php');
-  $result = mysqli_query($connection, "SELECT username FROM users WHERE username = '$_SESSION[user]'");
+  $result1 = mysqli_query($connection, "SELECT username FROM users WHERE username = '$_SESSION[user]'");
+  $result2 = mysqli_query($connection, "SELECT name FROM users WHERE username = '$_SESSION[user]'");
   //$adminPriv = mysqli_query($connection, "SELECT admin FROM users WHERE username = '$_SESSION[user]'");
-  if (!$result) {
+  if (!$result1) {
     echo "Error: " . mysqli_error($connection);
   }
-  $username = mysqli_fetch_assoc($result)['username'];
+  $username = mysqli_fetch_assoc($result1)['username'];
+  $name = mysqli_fetch_assoc($result2)['name'];
   //$isAdmin = mysqli_fetch_assoc($adminPriv)['admin'];
 } ?>
 <!DOCTYPE html>
@@ -57,7 +59,7 @@ session_start(); ?>
             <a class="nav-link" href="practice.php" target="_top" aria-current="page">Practice</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="marketplace.php" target="_top" aria-current="page">Marketplace</a>
+            <a class="nav-link disabled" href="marketplace.php" target="_top" aria-current="page">Marketplace</a>
             </li>
             <li class="nav-item">
             <a class="nav-link disabled" href="" target="_top" aria-current="page">Merchandise</a>

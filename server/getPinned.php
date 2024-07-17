@@ -2,7 +2,7 @@
 include('../server/db_connect.php');
 ?>
 <?php 
-$posts = mysqli_fetch_all(mysqli_query($connection, "SELECT * FROM posts WHERE user = 'ryder';"), MYSQLI_ASSOC);
+$posts = mysqli_fetch_all(mysqli_query($connection, "SELECT * FROM posts WHERE user = 'CPT_Shank';"), MYSQLI_ASSOC);
 mysqli_close($connection);
 empty($posts) ? $isArray = false : $isArray = true;
                         if ($isArray) {

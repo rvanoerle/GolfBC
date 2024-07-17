@@ -10,6 +10,8 @@ The information I'm aiming to provide is a homepage with community updates, arti
 The forum section is a way to bring the local golf community together from events and swing help, to club talk and finding new friends to play with. 
 
 ![image](forums.png)
+![image](viewPost.png)
+
 
 ## Courses
 The courses section that has a list of all courses within the area, with filtering and review functionalities, and a page for each course containing all its information. 
@@ -32,4 +34,5 @@ Of course there will always be other local options to use as a way of finding ne
 Each user will have there own account, used for postings to forums, marketplace etc. I also aim to have customization for each where you can upload photos, display your gear and scores if you wish. 
 
 ![image](login.png)
+![image](profile.jpg)
 

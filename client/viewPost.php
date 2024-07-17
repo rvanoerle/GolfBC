@@ -61,7 +61,7 @@ empty($comments) ? $isArray = false : $isArray = true;
                                         <div class="card-body"> 
                                         <p class = "card-text">'.$comment['content'].'</p> 
                                     </div>
-                                    <div class="card-footer text-muted"><span>2 days ago</span><span class = "float-end">Commented by: '.$user.'</span></div>
+                                    <div class="card-footer text-muted"><span>2 days ago</span><span class = "float-end">Commented by: '.$comment['user'].'</span></div>
                                     </div>
                                     </div>';
                             }
@@ -81,7 +81,7 @@ empty($comments) ? $isArray = false : $isArray = true;
                             echo '<input type="hidden" id="postId" class="form-control" value ="'.$id.'">'; ?>
                             <button type="button" id = "postComment" class="btn btn-primary" style = "margin:10px">Comment</button> 
 
-                            <div class="alert alert-danger" role="alert" id="failedComment"></div>
+                            <div hidden class="alert alert-danger" role="alert" id="failedComment"></div>
                             
                         </div>
                     </form>
