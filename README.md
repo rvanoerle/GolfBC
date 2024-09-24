@@ -2,7 +2,7 @@
 ## Description
 The goal of this platform is to create an one-stop shop for the local golf community. With infomation scattered across dozens of apps, newspapers, local blogs and groups finding your local information can be challenging. 
 ## Technical
-The website has been developed using XAMPP and written using Apache, PHP, MySQL and Javascript. Nearly all information is pulled stored and pulled from the database. Ajax is also used pull information asynchronously. There are still many functionalities that need to be incorporated and bugs to be fixed.
+The website has been developed using Apache, PHP, MySQL and Javascript. Nearly all information is pulled stored and pulled from the database. Ajax is also used pull information asynchronously. There are still many functionalities that need to be incorporated and bugs to be fixed.
 ## Homepage
 The information I'm aiming to provide is a homepage with community updates, articles written by local enthusiast's and current events. 
 
