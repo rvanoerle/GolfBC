@@ -35,7 +35,7 @@ require('../server/db_connect.php');
 </div>
 <script src ="js/ratingsubmit.js"></script>
 <script>
-
+//Adjusts CSS based on user given course rating (Fills stars for rating)
 $('div.rating button').on('click',function(){
     $("#finalRate").val($(this).attr("id"));
     $.each($("div.rating").find("button"),function(){

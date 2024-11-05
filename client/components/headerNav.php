@@ -34,7 +34,7 @@ session_start(); ?>
  
 <nav class="navbar navbar-expand-lg sticky-top bg-light navbar-light justify-content-center">
     <div class = "container">
-    <ul class="nav">
+    <ul class="nav d-xs-none">
             <li class="nav-item">
                 <select class="form-select form-select-sm " aria-label="Default select example">
                     <option selected>Community</option>
@@ -69,7 +69,10 @@ session_start(); ?>
     </div>
     
     <div class="btn-group">
-    <?php if (isset($_SESSION['user'])){
+    
+    <?php 
+         // Check if user is logged in. Adjust navbar for logged in user funcationalities.
+        if (isset($_SESSION['user'])){
                     echo '<ul class = "nav"><li class="nav-item"><a class="nav-link disabled" href="#">' . $username . '</a><li></ul>';
                     } ?>
                     <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -99,10 +102,8 @@ session_start(); ?>
 </nav>
 </div>
 </header>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        
+    
+<!-- Script to set active tab on navbar -->
 <script> 
         //alert('/golfbc/client/' + $(this).find('a.nav-link').attr('href'));
         //alert(window.location.pathname);
@@ -117,3 +118,7 @@ session_start(); ?>
     $('a.active').css("font-weight","bold");
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  

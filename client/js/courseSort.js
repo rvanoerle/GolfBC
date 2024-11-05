@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(e){
-
+  
+  //Replaces courses page based on search and sorting inputs
     $(".srt").on('click',function() {
         e.preventDefault();
         $("#cards").empty();

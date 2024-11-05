@@ -1,4 +1,6 @@
 <?php
+//connect to database
+
 $host = "localhost";
 $database = "10817427";
 $user = "10817427";

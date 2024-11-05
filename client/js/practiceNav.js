@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(e){
-
+    // Allows for Asycnchronous JavaScript and page updating based on selected practice tabs.
     $("button").on('click',function() {
       e.preventDefault();
       $("ul.nav").find(".active").removeClass("active");

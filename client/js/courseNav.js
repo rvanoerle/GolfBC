@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(e){
+    
+    //Gets course id from PHP request and attaches relevant course information
     var courseId = $("#courseId").attr("value");
     $.get(
         "../server/getCourseInfo.php",
@@ -60,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function(e){
                 }
             }
             );
-
+    // toggles and replaces page info from select tab
     $("#about").on('click',function() {
         e.preventDefault();
         $("ul.nav").find(".active").removeClass("active");
@@ -99,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function(e){
                             <td>${course.designer}</td>
                     </tr>
                     <tr>
-                            <th scope="row">Rating/Slope</th>
+                            <th scope="row">Slope/Rating</th>
                             <td>${course.slope}</td>
                     </tr>
                     <tr>

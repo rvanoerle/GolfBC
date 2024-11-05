@@ -2,6 +2,8 @@
 include('../server/db_connect.php');
 ?>
 <?php 
+//gets course information from DB
+
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
 if(isset($_GET["courseId"])){
     $cid = $_GET['courseId'];

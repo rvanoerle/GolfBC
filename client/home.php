@@ -3,7 +3,7 @@
 require('components/headerNav.php');
 require('../server/db_connect.php');
 
-
+//Primarily testing page, adjusted landing page to forum page.
 if ($error != null){
     $output ="<p> Unable to connect to database <p>" .$error;
     exit($output);

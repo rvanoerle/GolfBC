@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function(e){
   $("#close").click(function (e) {
     $("#failedReview").attr("hidden","true");
   });
+    //Checks for correct data from course rating submission and posts to back-end for validation and submission into DB.
     $("#sub").click(function (e) {
         $("#failedReview").attr("hidden","true");
       e.preventDefault();

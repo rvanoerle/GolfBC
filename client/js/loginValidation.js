@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(e){
+  //User login validation function
   $("#loginButton").click(function (e) {
     e.preventDefault();
     let username = $("#accEmail").val();
